@@ -25,7 +25,7 @@ The derivative of this loss with respect to the activations is $\frac{\partial E
 
 As we said, we take many layers, hence the final **style loss** is $L_{style}=\sum_{l}w_{l}E_{l}$. The weights $w_{l}$ are used to give importance to some layers rather than others. In the image in the introduction we used uniform weights of $0.25$.
 
-The final image **G** is then synthesized by matching the contents of the content image **C** using the style of the style image **C**. We want the location and global arrangement of the contents to be preserved while the colours and local structures and texture to be taken from the style image.
+The final image **G** is then synthesized by matching the contents of the content image **C** using the style of the style image **C**. We want the location and global arrangement of the contents to be preserved while the colours and local structures and texture to be taken from the style image. That's why the final loss that's computed is $L(G, C, S) = \alpha L_{content}(G, C) + \beta L_{style}(G, S)$. $\alpha$ and $\beta$ control the value of preserving the content and style respectively. A high $\frac{\alpha}{\beta}$ ratio value would give more importance to preserving the content and have it less distorted while a small value of the ratio would give more importance to the style and would result into a more texturized image.
 
 # References
 [1] Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." arXiv preprint arXiv:1508.06576 (2015).
