@@ -9,7 +9,13 @@ To formalize these two notions the authors use [Convolutional Neural Networks](h
 
 So the content of an image could be synthesized using the activations of deep layers of a CNN after getting the image through the forward pass, but these layers don't preserve the exact location of the object they extract such as if our initial image contained a dog at the center, the activations would certainly return a dog but not necessarily at the center. Meanwhile, the firsts layers of a CNN will preserve the location of pixels. **We need a trade-off between the firsts and the deepest layers**.
 
+Let $l$ denote the index of a convolutional layer and let $N_{l}$ denote the number of filters it uses to produce a volume of feature map of size $(W_{l}, H_{l}, N_{l})$ with $(W_{l}, H_{l})$ the shape of a feature map. We can represent that volume by a matrix $a^{l}$ in $\mathbb{M}_{N_{l},W_{l}\times H_{l}}(\mathbb{R})$. $a_{i,.}^{l}$ is the vector obtained by unrolling the $i$-th feature map, and that's why it contains $W_{l} \times H_{l}$ and that there are $N_{l}$ rows.
+
+Now if we have a generated image **G** for which we want to paste the *content* of the content image **C**, we can change the pixels of **G** such as the different convolutional layers' activations while passing **G** are as close as possible to those we get by passing **C** through the CNN. Formally, if we denote the activations of layer $l$ when we pass **C** by $a^{l, [C]}$ and the activations of the same layer when we pass **G** by $a^{l, [G]}$ then by minimizing the **content loss** $L_{content} = ||a^{l, [C]} - a^{l, [G]}||_{F}^{2}$, **G would resemble C**. Here $||A||_{F}$ represents the [Frobenius norm](https://mathworld.wolfram.com/FrobeniusNorm.html).
+
 # References
 [1] Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. "A neural algorithm of artistic style." arXiv preprint arXiv:1508.06576 (2015).
 
 [2] Zeiler, Matthew D., and Rob Fergus. "Visualizing and understanding convolutional networks." In European conference on computer vision, pp. 818-833. Springer, Cham, 2014.
+
+[3] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. "Texture synthesis using convolutional neural networks." _Advances in neural information processing systems_ 28 (2015).
