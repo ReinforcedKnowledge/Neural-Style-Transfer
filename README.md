@@ -2,7 +2,7 @@
 The above code follows and offers an implementation for the paper [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576) (Gatys et al.) [1].
 The goal of the work is to recreate an image by using the style of another image (e.g. a painting), as we can see below we recreate a photo of New York (taken from [iloveny.com](https://www.iloveny.com/)) using the style of [Van Gogh](https://en.wikipedia.org/wiki/Vincent_van_Gogh) extracted from its [The Starry Night](https://en.wikipedia.org/wiki/The_Starry_Night) painting.
 
-![alt text](https://github.com/ReinforcedKnowledge/Natural-Style-Transfer/blob/main/mixed_new_york.png?raw=true)
+![title](https://github.com/ReinforcedKnowledge/Neural-Style-Transfer/blob/main/images/mixed_new_york.png)
 
 # How It Works
 To recreate an image using the style extracted from another image we have to understand first what is the *style*. That's why the authors distinguish between the *content* of an image, and its style. The content of an image will describe what the image is made of, its components etc. while the style of an image will describe the texture information of an image. It is a restricted definition of what we understand intuitively and the shortcomings will be discussed in a later section.
