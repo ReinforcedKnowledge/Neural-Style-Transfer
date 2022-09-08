@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 from optimize import optim_step
 
-tf.random.set_seed(0) # For replication and because streamlit reruns the whole script
+tf.random.set_seed(0)
 
 IMAGES_FOLDER = './images'
 IMG_SIZE = 224
@@ -20,7 +20,7 @@ STYLE_LAYERS = [
 ]
 CONTENT_LAYER = [('block5_conv4', 1)]
 
-def image_selector(key): # Put in utilities later
+def image_selector(key):
     filenames = os.listdir(IMAGES_FOLDER)
     selected_filename = st.selectbox('', filenames, key=key)
     return os.path.join(IMAGES_FOLDER, selected_filename)
@@ -48,7 +48,6 @@ st.write(
 )
 
 content_image_path = image_selector(key='content')
-#st.write('You have selected `%s`' % content_image_path)
 st.image(content_image_path, caption=content_image_path.split('/')[-1])
 
 st.write( 
