@@ -8,3 +8,5 @@
 - Play with the hyperparameters
 - Run!
 - Result: ![title](https://github.com/ReinforcedKnowledge/Neural-Style-Transfer/blob/main/images/trees_building_mixed.jpeg)
+
+#### Click [her, on 'paper explanation.md']([https://link-url-here.org](https://github.com/ReinforcedKnowledge/Neural-Style-Transfer/blob/main/paper%20explanation.md)) to understand how this works! 
