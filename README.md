@@ -1,6 +1,6 @@
 ### How to use?
 
-- Create an environment using ```requirements.txt```, the Python version is $3.9.12$.
+- Create a virtual environment using ```requirements.txt```, the Python version is $3.9.12$.
 - Activate it.
 - Run ```streamlit run main.py```.
 - Select your content image: ![title](https://github.com/ReinforcedKnowledge/Neural-Style-Transfer/blob/main/images/trees.jpg)
